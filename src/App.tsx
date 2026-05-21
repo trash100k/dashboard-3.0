@@ -11,7 +11,7 @@ import Settings from './pages/Settings';
 
 const pages: Record<string, { title: string; component: React.ComponentType }> = {
   home: { title: 'Home', component: Home },
-  folders: { title: 'Super-Folders', component: SuperFolders },
+  superfolders: { title: 'Super-Folders', component: SuperFolders },
   apphub: { title: 'App Hub', component: AppHub },
   assets: { title: 'Asset Library', component: AssetLibrary },
   projects: { title: 'Projects', component: Projects },

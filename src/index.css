@@ -1,3 +1,63 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-bg-base: #050505;
+  --color-bg-surface: #0D0F11;
+  --color-bg-elevated: #141618;
+  --color-gold: #D4AF37;
+  --color-gold-dim: rgba(212, 175, 55, 0.15);
+  --color-emerald: #64dcb4;
+  --color-emerald-dim: rgba(100, 220, 180, 0.12);
+  --color-violet: #8b5cf6;
+  --color-violet-dim: rgba(139, 92, 246, 0.15);
+  --color-fog: #c8c8d0;
+  --color-muted: rgba(200, 200, 208, 0.35);
+  --color-danger: #ef4444;
+  --color-border: rgba(100, 220, 180, 0.06);
+  --color-border-active: rgba(100, 220, 180, 0.2);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 220, 180, 0.15) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(100, 220, 180, 0.15);
+  border-radius: 3px;
+}
+
+::selection {
+  background: rgba(212, 175, 55, 0.25);
+  color: #fff;
+}
+
+body {
+  background: var(--color-bg-base);
+  color: var(--color-fog);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(100, 220, 180, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(100, 220, 180, 0.6); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}

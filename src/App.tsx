@@ -8,6 +8,8 @@ import AssetLibrary from './pages/AssetLibrary';
 import Projects from './pages/Projects';
 import LivingDoc from './pages/LivingDoc';
 import Settings from './pages/Settings';
+import IntelSearch from './pages/IntelSearch';
+import Factories from './pages/Factories';
 
 const pages: Record<string, { title: string; component: React.ComponentType }> = {
   home: { title: 'Home', component: Home },
@@ -17,6 +19,8 @@ const pages: Record<string, { title: string; component: React.ComponentType }> =
   projects: { title: 'Projects', component: Projects },
   livingdoc: { title: 'Living Document', component: LivingDoc },
   settings: { title: 'Settings', component: Settings },
+  intelsearch: { title: 'Intel & Search', component: IntelSearch },
+  factories: { title: 'Factories', component: Factories },
 };
 
 function App() {
